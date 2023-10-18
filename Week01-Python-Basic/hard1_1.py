@@ -19,13 +19,17 @@ target_number = int(input(f"input target: "))
 
 result = []
 target_dict = {}
+
 for i, arg1 in enumerate(numbers):
     for j in range(0, len(numbers) - i - 1):
+        # get answer
         answer = numbers[i] + numbers[j]
+        # Save a + b = c in array
         result.append([i, j, answer])
 
 target_index = []
 for nested in result:
+    # check if answer(c) == target_number
     if target_number == nested[2]:
         target_index.append([nested[0], nested[1]])
 

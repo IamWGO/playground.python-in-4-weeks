@@ -1,29 +1,6 @@
 # H 1.3 Happy numbers
 # https://leetcode.com/problems/happy-number/
 
-
-
-
-
-
-
-
-
-
-
-# Write an algorithm to determine if a number n is happy.
-#
-# A happy number is a number defined by the following process:
-#
-# Starting with any positive integer, replace the number by the sum of the squares of its digits.
-# Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
-# Those numbers for which this process ends in 1 are happy.
-# Return true if n is a happy number, and false if not.
-#
-#
-#
-# Example 1:
-#
 # Input: n = 19
 # Output: true
 # Explanation:
@@ -35,8 +12,33 @@
 #
 # Input: n = 2
 # Output: false
-#
-#
-# Constraints:
-#
-# 1 <= n <= 231 - 1
+
+happy_number = input("input your happy number: ")
+happy_row = 0
+is_happy_number = False
+
+try:
+    int(happy_number)
+
+    while len(str(happy_number)) > 1:
+        is_happy_number = True
+        digit_list = []
+        operator_string = ""
+        number_string = str(happy_number)
+        for digit in range(len(number_string)):
+            digit_list.append(int(number_string[digit]) ** 2)
+            operator_string += number_string[digit] + "+"
+
+        happy_number = sum(digit_list)
+        operator_string = operator_string[:-1] + " ="
+        print(f"{operator_string} {happy_number}")
+        digit_list.clear()
+
+    if is_happy_number:
+        print("it is happy number ^^")
+    else:
+        print("it is not happy number!!")
+
+
+except ValueError:
+    print("The input is not a number.")

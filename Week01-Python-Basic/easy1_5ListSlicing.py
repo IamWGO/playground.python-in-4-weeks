@@ -26,17 +26,3 @@ print("\n5.Skapar en ny lista som är en kopia av den omvända original listan."
 copy_numbers = numbers
 reversed_numbers = copy_numbers[::-1]
 print(reversed_numbers)
-
-# numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-
-# [1, 2, 3, 4, 5]
-# print(numbers[0:5])
-
-# [1, 3, 5, 7, 9]
-# print(numbers[0:10:2])
-
-# [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-# print(numbers)
-
-# [num for num in nums]
-# [[num,num*2] for num in nums]

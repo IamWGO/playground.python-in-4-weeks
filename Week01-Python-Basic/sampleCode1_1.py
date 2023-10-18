@@ -1,4 +1,14 @@
+# [1, 2, 3, 4, 5]
+# print(numbers[0:5])
 
+# [1, 3, 5, 7, 9]
+# print(numbers[0:10:2])
+
+# [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+# print(numbers)
+
+# [num for num in nums]
+# [[num,num*2] for num in nums]
 
 #
 # #Substring
@@ -37,6 +47,8 @@
 # contents = f.read()
 # print(contents.upper())
 # f.close()
+
+
 
 with open("textfile.txt") as file:
     for line in file:
