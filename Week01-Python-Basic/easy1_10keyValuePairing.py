@@ -14,7 +14,7 @@ def print_values(arg_person):
 # print("Skapa en dictionary som representerar en person " +
 #       "den ska innehålla förnamn, efternamn, ålder och e-postadress.")
 
-person = {"First Name": "Waleerat S.",
+person = {"First Name": "Waleerat",
           "Lastname": "Gottlieb",
           "Age": 44,
           "Email": "waleerat.gottlieb@gmail.com"}
@@ -33,8 +33,18 @@ print_values(person)
 
 answer = input(f'\nDo you have middle name ?(y/any) ')
 if answer.lower() == "y":
-    input_string = input(f'\nmiddle name ? ')
-    person["middle name"] = input_string
+
+    while True:
+        input_string = input(f'\nmiddle name ? ')
+        if input_string != "":
+            person["middle name"] = input_string
+            break
+        else:
+            print("middle name should not be empty")
+            answer = input(f'\n Do you still want to add middle name? (y/any) ')
+            if answer.lower() != "y":
+                break
+
     print_values(person)
 else:
     print("Do not thing")

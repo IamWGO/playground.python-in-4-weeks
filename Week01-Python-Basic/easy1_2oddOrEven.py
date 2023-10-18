@@ -2,6 +2,15 @@
 # Skriv en funktion som tar in en enskild siffra
 # och skriver ut om den är udda eller jämn.
 
+def get_input_number(text) -> int:
+    while True:
+        try:
+            number = int(input(f'{text} '))
+            return number
+        except ValueError:
+            print("The input is not a number.")
+
+
 def odd_or_even(number):
     if number % 2 == 0:
         print("Odd")
@@ -9,7 +18,6 @@ def odd_or_even(number):
         print("Even")
 
 
-inputNumber = int(input('Your number? '))
-
+inputNumber = get_input_number('Your number? ')
 print('your number :', inputNumber)
 odd_or_even(inputNumber)

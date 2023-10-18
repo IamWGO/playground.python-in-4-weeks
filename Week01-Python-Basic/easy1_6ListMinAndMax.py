@@ -4,12 +4,20 @@
 # 3.Looking for a function to find the smallest number.
 # 4.Finds the sum of all numbers in the list.
 # 5.Sorts the list from lowest to highest.
+def get_input_number(text) -> int:
+    while True:
+        try:
+            number = int(input(f'{text} '))
+            return number
+        except ValueError:
+            print("The input is not a number.")
+
 
 numbers = []
 print("1.Skapar en lista med 10 slumpmässiga heltal.")
 for x in range(10):
-    new_number = input(f'Your String {x + 1} ? ')
-    numbers.append(int(new_number))
+    new_number = get_input_number(f'Your number {x + 1} ? ')
+    numbers.append(new_number)
 
 print("\n2.Letar reda på en inbyggd funktion för att hitta det största talet.")
 maximum_value = max(numbers)

@@ -4,16 +4,24 @@
 # Write a function that prints all numbers from 1 to a given number.
 # If the number is divisible by 3, print "Fizz". If the number is divisible by 5, print "Buzz".
 # If the number is divisible by 3 and 5, print "FizzBuzz".
+def get_input_number(text) -> int:
+    while True:
+        try:
+            number = int(input(f'{text} '))
+            return number
+        except ValueError:
+            print("The input is not a number.")
 
-range_numbers = int(input("Show number from 1 to "))
 
-for number in range(1, range_numbers + 1):
-    if number % 3 == 0 and number % 5 == 0:
+range_numbers = get_input_number("Show number from 1 to .. ")
+
+for num in range(1, range_numbers + 1):
+    if num % 3 == 0 and num % 5 == 0:
         print("FizzBuzz")
-    elif number % 3 == 0:
+    elif num % 3 == 0:
         print("FiZZ")
-    elif number % 5 == 0:
+    elif num % 5 == 0:
         print("Buzz")
     else:
-        print(number)
+        print(num)
 

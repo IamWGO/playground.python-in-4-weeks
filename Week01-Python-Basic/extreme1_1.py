@@ -1,3 +1,5 @@
+# Logic form ChatGPT -> Add print log and I understand concept
+
 def longest_unique_substring(sentence):
     start = 0
     end = 0

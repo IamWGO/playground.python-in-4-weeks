@@ -10,6 +10,11 @@
 # [num for num in nums]
 # [[num,num*2] for num in nums]
 
+# try:
+#     int(age)
+# except ValueError:
+#     print("The input is not a number.")
+
 #
 # #Substring
 # my_string = "Hello world!"
@@ -67,3 +72,29 @@ with open("textfile.txt") as file:
 
     if not found:
         print(f"Text {substring} not found")
+
+
+# --------------
+try:
+    age = int(input('How old are you? '))  # for check exception
+
+except ValueError:
+    print("The input is not a number.")
+
+numbers = []
+while True:
+    try:
+        new_number = input(f'Your Number ? ')
+        numbers.append(int(new_number))
+        break
+    except ValueError:
+        print("The input is not a number.")
+
+
+def get_input_number() -> int:
+    while True:
+        try:
+            new_number = int(input(f'Your Number ? '))
+            return new_number
+        except ValueError:
+            print("The input is not a number.")

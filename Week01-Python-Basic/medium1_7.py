@@ -1,10 +1,6 @@
-# M 1.7 Rövarspråket
-# Gör ett program som översätter en sträng till rövarspråket.
-# (https://sv.wikipedia.org/wiki/R%C3%B6varspr%C3%A5ket)
-
 # M 1.7 The Robber's Language
 # Make a program that translates a string into the robber language.
-# ### Code from ChatGPT
+# ### Code from ChatGPT because I don't understand the logic
 
 def to_rovarspraket(text):
     vowels = "AEIOUaeiou"

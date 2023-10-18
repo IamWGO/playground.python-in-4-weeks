@@ -3,10 +3,17 @@
 # och sedan skriver ut om de är minderåriga (under 18 år),
 # vuxna (mellan 18 och 65) eller pensionärer (över 65).
 
-age = int(input('How old are you?'))
+def get_input_number(text) -> int:
+    while True:
+        try:
+            number = int(input(f'{text} '))
+            return number
+        except ValueError:
+            print("The input is not a number.")
 
+
+age = get_input_number('How old are you? ')  # for check exception
 print('your age is :', age)
-
 # elif 18 <= age <= 65:
 # elif age >= 18 and age <= 65:
 if age < 18:
