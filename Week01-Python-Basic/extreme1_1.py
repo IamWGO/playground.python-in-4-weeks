@@ -7,9 +7,6 @@ def longest_unique_substring(sentence):
     unique_chars = []
 
     while end < len(sentence):
-        print(f"----> loop {end} {sentence}")
-        print(f"  |end={end} |start={start} |max_length={max_length} |max_start={max_start}" +
-              f" |max_end={max_end} |unique_chars={unique_chars}")
         if sentence[end] not in unique_chars:
             unique_chars.append(sentence[end])
             end += 1
