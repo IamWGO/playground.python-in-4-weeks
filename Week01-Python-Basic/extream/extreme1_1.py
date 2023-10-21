@@ -25,8 +25,6 @@ def longest_unique_substring(sentence):
                 max_length {max_length} = current_length {current_length}
                 max_start {max_start} = start {start}
                 max_end {max_end} = end {end}""")
-            else:
-                print("    do nothing")
         else:
             unique_chars.remove(sentence[start])
             start += 1
