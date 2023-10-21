@@ -18,14 +18,20 @@ def return_even_numbers(arg) -> []:
     return return_numbers
 
 
-numbers = []
-print("\n input 10 numbers.")
-for x in range(10):
-    new_number = get_input_number(f'Your number {x + 1} ? ')
-    numbers.append(new_number)
+def main():
+    numbers = []
+    print("\n input 10 numbers.")
+    for x in range(10):
+        new_number = get_input_number(f'Your number {x + 1} ? ')
+        numbers.append(new_number)
 
-print(f"Your numbers {numbers}")
+    print(f"Your numbers {numbers}")
 
-print("\n returnerar hur många jämna tal det finns i listan")
-print(f"Even numbers : {return_even_numbers(numbers)}")
+    print("\n returnerar hur många jämna tal det finns i listan")
+    print(f"Even numbers : {return_even_numbers(numbers)}")
+
+
+if __name__ == '__main__':
+    main()
+
 

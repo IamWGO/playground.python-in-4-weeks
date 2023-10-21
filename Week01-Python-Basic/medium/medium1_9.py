@@ -13,11 +13,15 @@ def invert_dictionary(dictionary) -> {}:
             invert_dict[value].append(key)
     return invert_dict
 
+def main():
+    show_time = {'movie1': '11:00am',
+                 'movie2': '11:00am',
+                 'movie3': '3:00pm',
+                 'movie4': '5:00pm'}
 
-show_time = {'movie1': '11:00am',
-             'movie2': '11:00am',
-             'movie3': '3:00pm',
-             'movie4': '5:00pm'}
+    print(f"List by movie: {show_time}")
+    print(f"List by time: {invert_dictionary(show_time)}")
 
-print(f"List by movie: {show_time}")
-print(f"List by time: {invert_dictionary(show_time)}")
+
+if __name__ == '__main__':
+    main()

@@ -22,25 +22,30 @@ def get_input_number(text) -> int:
             print("The input is not a number.")
 
 
-happy_number = get_input_number("input your happy number: ")
-happy_row = 0
-is_happy_number = False
+def main():
+    happy_number = get_input_number("input your happy number: ")
+    happy_row = 0
+    is_happy_number = False
 
-while len(str(happy_number)) > 1:
-    is_happy_number = True
-    digit_list = []
-    operator_string = ""
-    number_string = str(happy_number)
-    for digit in range(len(number_string)):
-        digit_list.append(int(number_string[digit]) ** 2)
-        operator_string += " " + number_string[digit] + "**2 " + "+"
+    while len(str(happy_number)) > 1:
+        is_happy_number = True
+        digit_list = []
+        operator_string = ""
+        number_string = str(happy_number)
+        for digit in range(len(number_string)):
+            digit_list.append(int(number_string[digit]) ** 2)
+            operator_string += " " + number_string[digit] + "**2 " + "+"
 
-    happy_number = sum(digit_list)
-    operator_string = operator_string[:-1] + " ="
-    print(f"{operator_string} {happy_number}")
-    digit_list.clear()
+        happy_number = sum(digit_list)
+        operator_string = operator_string[:-1] + " ="
+        print(f"{operator_string} {happy_number}")
+        digit_list.clear()
 
-if is_happy_number:
-    print("it is happy number ^^")
-else:
-    print("it is not happy number!!")
+    if is_happy_number:
+        print("it is happy number ^^")
+    else:
+        print("it is not happy number!!")
+
+
+if __name__ == '__main__':
+    main()

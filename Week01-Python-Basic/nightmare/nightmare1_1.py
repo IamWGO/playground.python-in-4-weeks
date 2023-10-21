@@ -24,27 +24,31 @@ def get_median_of_sorted_arrays(arrayItems) -> int:
     return middle_of_sort_value
 
 
+def main():
+    numbers1 = []
+    numbers2 = []
 
-numbers1 = []
-numbers2 = []
+    maxSet1 = get_input_number("Amount of number list set 1: ")
+    for index in range(maxSet1):
+        numbers1.append(get_input_number(f"Input a number {index + 1}: "))
 
-maxSet1 = get_input_number("Amount of number list set 1: ")
-for index in range(maxSet1):
-    numbers1.append(get_input_number(f"Input a number {index + 1}: "))
+    maxSet2 = get_input_number("Amount of number list set 2: ")
+    for index in range(maxSet2):
+        numbers2.append(get_input_number(f"Input a number {index + 1}"))
 
-maxSet2 = get_input_number("Amount of number list set 2: ")
-for index in range(maxSet2):
-    numbers2.append(get_input_number(f"Input a number {index + 1}"))
+    combined = numbers1 + numbers2
+    sorted_numbers = sorted(combined)
 
-combined = numbers1 + numbers2
-sorted_numbers = sorted(combined)
+    middle_sort_value = get_median_of_sorted_arrays(combined)
 
-middle_sort_value = get_median_of_sorted_arrays(combined)
+    print(f"\nCombine arrays: {combined}")
+    print(f"\nMedian of Two Sorted Arrays {middle_sort_value}")
 
-print(f"\nCombine arrays: {combined}")
-print(f"\nMedian of Two Sorted Arrays {middle_sort_value}")
+    print("-- End program Nightmare1.1 --")
 
-print("-- End program Nightmare1.1 --")
+if __name__ == '__main__':
+    main()
+
 
 # The overall run time complexity should be O(log (m+n)).
 #

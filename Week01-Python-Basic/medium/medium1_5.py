@@ -13,15 +13,19 @@ def get_input_number(text) -> int:
             print("The input is not a number.")
 
 
-range_numbers = get_input_number("Show number from 1 to .. ")
+def main():
+    range_numbers = get_input_number("Show number from 1 to .. ")
 
-for num in range(1, range_numbers + 1):
-    if num % 3 == 0 and num % 5 == 0:
-        print("FizzBuzz")
-    elif num % 3 == 0:
-        print("FiZZ")
-    elif num % 5 == 0:
-        print("Buzz")
-    else:
-        print(num)
+    for num in range(1, range_numbers + 1):
+        if num % 3 == 0 and num % 5 == 0:
+            print("FizzBuzz")
+        elif num % 3 == 0:
+            print("FiZZ")
+        elif num % 5 == 0:
+            print("Buzz")
+        else:
+            print(num)
 
+
+if __name__ == '__main__':
+    main()

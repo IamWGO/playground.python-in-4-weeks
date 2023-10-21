@@ -12,13 +12,17 @@ def get_input_number(text) -> int:
             print("The input is not a number.")
 
 
-age = get_input_number('How old are you? ')  # for check exception
-print('your age is :', age)
-# elif 18 <= age <= 65:
-# elif age >= 18 and age <= 65:
-if age < 18:
-    print("minderåriga")
-elif 18 <= age <= 65:
-    print("mellan 18 och 65")
-else:
-    print("över 65")
+def main():
+    age = get_input_number('How old are you? ')  # for check exception
+    print('your age is :', age)
+    # elif 18 <= age <= 65:
+    # elif age >= 18 and age <= 65:
+    if age < 18:
+        print("minderåriga")
+    elif 18 <= age <= 65:
+        print("mellan 18 och 65")
+    else:
+        print("över 65")
+
+
+main()

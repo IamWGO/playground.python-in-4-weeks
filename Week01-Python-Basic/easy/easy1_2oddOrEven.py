@@ -18,6 +18,10 @@ def odd_or_even(number):
         print("Even")
 
 
-inputNumber = get_input_number('Your number? ')
-print('your number :', inputNumber)
-odd_or_even(inputNumber)
+def main():
+    inputNumber = get_input_number('Your number? ')
+    print('your number :', inputNumber)
+    odd_or_even(inputNumber)
+
+
+main()

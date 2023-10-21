@@ -11,45 +11,51 @@ def print_values(arg_person):
         print(f" {key}: {value}")
 
 
-# print("Skapa en dictionary som representerar en person " +
-#       "den ska innehålla förnamn, efternamn, ålder och e-postadress.")
+def main():
+    # print("Skapa en dictionary som representerar en person " +
+    #       "den ska innehålla förnamn, efternamn, ålder och e-postadress.")
 
-person = {"First Name": "Waleerat",
-          "Lastname": "Gottlieb",
-          "Age": 44,
-          "Email": "waleerat.gottlieb@gmail.com"}
+    person = {"First Name": "Waleerat",
+              "Lastname": "Gottlieb",
+              "Age": 44,
+              "Email": "waleerat.gottlieb@gmail.com"}
 
-# print("\n Skriv ut varje informationsdel individuellt med hjälp av nycklarna.")
-print_values(person)
+    # print("\n Skriv ut varje informationsdel individuellt med hjälp av nycklarna.")
+    print_values(person)
 
-# print("\nLägg till ett nytt nyckel-värde-par som representerar personens hemstad.")
-input_string = input(f'\nYour home town ? ')
-person["howe town"] = input_string
-
-print_values(person)
-
-# print("\nKontrollera om personen har en nyckel \"mellannamn\". " +
-#       " Om inte, lägg till det med ett värde efter eget val.")
-
-answer = input(f'\nDo you have middle name ?(y/any) ')
-if answer.lower() == "y":
-
-    while True:
-        input_string = input(f'\nmiddle name ? ')
-        if input_string != "":
-            person["middle name"] = input_string
-            break
-        else:
-            print("middle name should not be empty")
-            answer = input(f'\n Do you still want to add middle name? (y/any) ')
-            if answer.lower() != "y":
-                break
+    # print("\nLägg till ett nytt nyckel-värde-par som representerar personens hemstad.")
+    input_string = input(f'\nYour home town ? ')
+    person["howe town"] = input_string
 
     print_values(person)
-else:
-    print("Do not thing")
 
-print("\nUppdatera personens ålder genom att öka den med ett")
-person["Age"] += 1
+    # print("\nKontrollera om personen har en nyckel \"mellannamn\". " +
+    #       " Om inte, lägg till det med ett värde efter eget val.")
 
-print_values(person)
+    answer = input(f'\nDo you have middle name ?(y/any) ')
+    if answer.lower() == "y":
+
+        while True:
+            input_string = input(f'\nmiddle name ? ')
+            if input_string != "":
+                person["middle name"] = input_string
+                break
+            else:
+                print("middle name should not be empty")
+                answer = input(f'\n Do you still want to add middle name? (y/any) ')
+                if answer.lower() != "y":
+                    break
+
+        print_values(person)
+    else:
+        print("Do not thing")
+
+    print("\nUppdatera personens ålder genom att öka den med ett")
+    person["Age"] += 1
+
+    print_values(person)
+
+
+if __name__ == '__main__':
+    main()
+

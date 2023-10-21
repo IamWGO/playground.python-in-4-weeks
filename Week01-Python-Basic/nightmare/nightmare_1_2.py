@@ -3,18 +3,6 @@
 # return the length of the longest valid (well-formed) parentheses
 # substring.
 
-
-def input_string(text):
-    while True:
-        user_input = input(text)
-        user_input = user_input.strip()  # Remove leading and trailing whitespace
-
-        if user_input:
-            return user_input
-        else:
-            print("Input error! Please try again.")
-
-
 def get_input_string(text):
     while True:
         user_input = input(text)
@@ -28,13 +16,13 @@ def is_correct_format(input_string):
     return all(char in "()" for char in input_string)
 
 
-def get_longest_parentheses(input_string_value):
+def get_longest_parentheses(input_string):
 
     parentheses_set = []
     open_parentheses = []
     string_set = ""
 
-    for char in input_string_value:
+    for char in input_string:
 
         if char == "(":
             open_parentheses.append(char)
@@ -45,7 +33,7 @@ def get_longest_parentheses(input_string_value):
                 open_parentheses.pop()
             string_set += char
 
-        # put parentheses set to array if has no open items in array
+        # put parentheses set
         # clear string_set and open_parentheses
         if len(open_parentheses) == 0 and len(string_set) > 0:
             parentheses_set.append(string_set)
@@ -67,12 +55,12 @@ def get_longest_parentheses(input_string_value):
 
 
 def main():
-    input_string_value = get_input_string("Input the characters only '(' or ')': ")
-    if not is_correct_format(input_string_value):
+    input_string = get_input_string("Input the characters only '(' or ')': ")
+    if not is_correct_format(input_string):
         print("The string should contain only '(' and ')")
         return
 
-    get_longest_parentheses(input_string_value)
+    get_longest_parentheses(input_string)
 
 
 main()

@@ -22,6 +22,11 @@ def is_number_in_range(number):
         print(f"number {number} is not in range 10 to 20.")
 
 
-inputNumber = get_input_number('Your number? ')
-print('your number :', inputNumber)
-is_number_in_range(inputNumber)
+def main():
+    input_number = get_input_number('Your number? ')
+    print('your number :', input_number)
+    is_number_in_range(input_number)
+
+
+if __name__ == '__main__':
+    main()

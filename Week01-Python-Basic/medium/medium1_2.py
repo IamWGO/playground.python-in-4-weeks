@@ -16,6 +16,11 @@ def most_common_number(numbers_arg) -> int:
     return max(common_numbers, key=common_numbers.get)
 
 
-numbers = [11, 22, 22, 23, 23, 23, 24, 24, 23, 24]
-print(f"numbers in array: {numbers}")
-print(f"Common number is: {most_common_number(numbers)}")
+def main():
+    numbers = [11, 22, 22, 23, 23, 23, 24, 24, 23, 24]
+    print(f"numbers in array: {numbers}")
+    print(f"Common number is: {most_common_number(numbers)}")
+
+
+if __name__ == '__main__':
+    main()

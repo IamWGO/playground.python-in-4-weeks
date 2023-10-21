@@ -8,21 +8,28 @@
 # 5.Creates a new list that is a copy of the reversed original list.
 
 
-print("1.Skapar en lista som innehåller numren 1 till 10.")
-numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
-print(numbers)
+def main():
+    print("\n1.Skapar en lista som innehåller fem element, som är dina favoritfrukter.")
 
-print("\n2.Använder list slicing för att skriva ut de första fem numren.")
-print(numbers[0:5])
+    print("1.Skapar en lista som innehåller numren 1 till 10.")
+    numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+    print(numbers)
 
-print("\n3.Använder list slicing för att skriva ut de sista fyra numren.")
-print(numbers[len(numbers) - 4: len(numbers)])
+    print("\n2.Använder list slicing för att skriva ut de första fem numren.")
+    print(numbers[0:5])
 
-print("\n4.Skriver ut varannat nummer i listan, börjande med det första.")
-for i, n in enumerate(numbers):
-    print(f"item {i + 1} -> {n}")
+    print("\n3.Använder list slicing för att skriva ut de sista fyra numren.")
+    print(numbers[len(numbers) - 4: len(numbers)])
 
-print("\n5.Skapar en ny lista som är en kopia av den omvända original listan.")
-copy_numbers = numbers
-reversed_numbers = copy_numbers[::-1]
-print(reversed_numbers)
+    print("\n4.Skriver ut varannat nummer i listan, börjande med det första.")
+    for i, n in enumerate(numbers):
+        print(f"item {i + 1} -> {n}")
+
+    print("\n5.Skapar en ny lista som är en kopia av den omvända original listan.")
+    copy_numbers = numbers
+    reversed_numbers = copy_numbers[::-1]
+    print(reversed_numbers)
+
+
+if __name__ == '__main__':
+    main()

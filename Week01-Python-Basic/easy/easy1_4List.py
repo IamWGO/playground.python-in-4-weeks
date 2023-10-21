@@ -29,21 +29,26 @@ def print_list():
     #     print(item)
 
 
-print("\n1.Skapar en lista som innehåller fem element, som är dina favoritfrukter.")
-print("\n2.Lägger till en ny frukt i listan.")
-for x in range(5):
-    new_string = input(f'Your String {x + 1} ? ')
-    add_string_to_list(new_string)
+def main():
+    print("\n1.Skapar en lista som innehåller fem element, som är dina favoritfrukter.")
+    print("\n2.Lägger till en ny frukt i listan.")
+    for x in range(5):
+        new_string = input(f'Your String {x + 1} ? ')
+        add_string_to_list(new_string)
 
-print_list()
+    print_list()
 
-print("\n3.Ändrar det tredje elementet till en annan frukt.")
-update_string = input(f'Your String to update in index-3 ? ')
-update_string_in_list(3, update_string)
+    print("\n3.Ändrar det tredje elementet till en annan frukt.")
+    update_string = input(f'Your String to update in index-3 ? ')
+    update_string_in_list(3, update_string)
 
-print_list()
+    print_list()
 
-print("\n4.Tar bort det sista elementet i listan.")
-delete_last_item_in_list()
+    print("\n4.Tar bort det sista elementet i listan.")
+    delete_last_item_in_list()
 
-print_list()
+    print_list()
+
+
+if __name__ == '__main__':
+    main()

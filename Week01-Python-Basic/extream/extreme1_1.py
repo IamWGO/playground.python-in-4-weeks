@@ -38,7 +38,13 @@ def longest_unique_substring(sentence):
     return sentence[max_start:max_end]
 
 
-# Example usage: pwwkew abcabcbb
-input_string = "pwwkew"
-result = longest_unique_substring(input_string)
-print("Longest unique substring:", result)
+def main():
+    # Example usage: pwwkew abcabcbb
+    input_string = "pwwkew"
+    result = longest_unique_substring(input_string)
+    print("Longest unique substring:", result)
+
+
+if __name__ == '__main__':
+    main()
+

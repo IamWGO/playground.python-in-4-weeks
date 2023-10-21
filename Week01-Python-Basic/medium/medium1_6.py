@@ -9,5 +9,10 @@ def get_every_other_letter(string) -> str:
     return result
 
 
-input_string = input("Input a string: ")
-print(f"Result of every other letter: {get_every_other_letter(input_string)}")
+def main():
+    input_string = input("Input a string: ")
+    print(f"Result of every other letter: {get_every_other_letter(input_string)}")
+
+
+if __name__ == '__main__':
+    main()
