@@ -39,12 +39,13 @@ def main():
     combined = numbers1 + numbers2
     sorted_numbers = sorted(combined)
 
-    middle_sort_value = get_median_of_sorted_arrays(combined)
+    middle_sort_value = get_median_of_sorted_arrays(sorted_numbers)
 
-    print(f"\nCombine arrays: {combined}")
+    print(f"\nCombine arrays: {sorted_numbers}")
     print(f"\nMedian of Two Sorted Arrays {middle_sort_value}")
 
     print("-- End program Nightmare1.1 --")
+
 
 if __name__ == '__main__':
     main()

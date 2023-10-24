@@ -55,14 +55,14 @@
 
 
 
-with open("textfile.txt") as file:
+with open("ReadFile/textfile.txt") as file:
     for line in file:
         print(line)
 
 
 substring = "TURBO!"
 found = False
-with open("textfile.txt") as file:
+with open("ReadFile/textfile.txt") as file:
     for line in file:
         print(line)
         if substring in line:
